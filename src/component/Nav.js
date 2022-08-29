@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { NAV_ITEM } from "../util/Enum";
 
 function Nav(params) {
@@ -8,9 +8,12 @@ function Nav(params) {
         {Object.keys(NAV_ITEM).map((key) => {
           const item = NAV_ITEM[key];
           return (
-            <li className="px-5 py-2.5 cursor-pointer hover:text-sky-700">
-              <Link to={item.path}>{item.text}</Link>
-            </li>
+            <NavLink to={item.path}>
+              <li className="px-5 py-2.5 cursor-pointer hover:text-sky-700">
+                <i className={item.icon}></i>
+                {item.text}
+              </li>
+            </NavLink>
           );
         })}
       </ul>

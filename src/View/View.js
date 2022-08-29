@@ -1,5 +1,5 @@
-import Content from "./Content";
-import Nav from "./Nav";
+import Content from "../component/Content";
+import Nav from "../component/Nav";
 
 function View({ props }) {
   return (

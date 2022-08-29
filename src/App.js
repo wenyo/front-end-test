@@ -2,7 +2,7 @@ import { Routes, Route, Router } from "react-router-dom";
 import "./App.css";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
-import View from "./component/View";
+import View from "./View/View";
 import { NAV_ITEM } from "./util/Enum";
 
 function App() {

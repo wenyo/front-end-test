@@ -32,8 +32,8 @@ function Content({ props }) {
 
   return (
     <div className="grow overflow-y-auto pr-40 pl-10">
-      <h3>{props}</h3>
-      <ul className="grid grid-cols-3 grid-flow-row gap-4">
+      <h3 className="h-12 flex items-center">{props}</h3>
+      <ul className="grid grid-cols-3 grid-flow-row gap-4 py-2.5">
         {newsList.map((news, key) => {
           return (
             <li key={key} className="relative rounded pb-10 overflow-hidden shadow-[0_0_4px_0_rgba(0,0,0,0.2)]">
