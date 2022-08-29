@@ -1,6 +1,6 @@
 function Header(params) {
   return (
-    <header className="h-[12vh] px-4 flex flex-row items-center justify-start shadow-[0_1px_0_0_rgba(0,0,0,0.1)]">
+    <header className="w-full h-[12vh] px-4 flex flex-row items-center justify-start shadow-[0_1px_0_0_rgba(0,0,0,0.1)]">
       <h1 className="h-16">
         <img className="h-full" src="./Bing-logo.png" />
       </h1>
