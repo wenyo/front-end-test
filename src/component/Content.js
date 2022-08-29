@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { newsDataGet } from "../util/api";
 
-function Content(params) {
+function Content({ props }) {
   const [newsList, setNewsList] = useState([]);
+  console.log(props);
 
   function timeDisplay(time) {
     const thisDate = `${new Date(time).getDate + 1}月${new Date(time).getDay}日`;
@@ -31,7 +32,7 @@ function Content(params) {
 
   return (
     <div className="grow overflow-y-auto pr-40 pl-10">
-      <h3>熱門報導</h3>
+      <h3>{props}</h3>
       <ul className="grid grid-cols-3 grid-flow-row gap-4">
         {newsList.map((news, key) => {
           return (

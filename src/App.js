@@ -1,18 +1,22 @@
+import { Routes, Route, Router } from "react-router-dom";
 import "./App.css";
 import Header from "./component/Header";
-import Nav from "./component/Nav";
 import Footer from "./component/Footer";
-import Content from "./component/Content";
+import View from "./component/View";
+import { NAV_ITEM } from "./util/Enum";
 
 function App() {
-
   return (
     <main className="h-screen flex flex-col flex-wrap">
       <Header />
-      <div className="grow flex flex-row h-10">
-        <Nav />
-        <Content />
-      </div>
+
+        <Routes>
+          {Object.keys(NAV_ITEM).map((key) => {
+            const item = NAV_ITEM[key];
+            return <Route element={<View props={item} />} path={item.path} key={key}></Route>;
+          })}
+        </Routes>
+
       <Footer />
     </main>
   );
